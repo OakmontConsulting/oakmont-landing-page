@@ -2,94 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oakmont Consulting</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      text-align: center;
-      padding: 20px;
+      padding: 0;
+      background-color: #2e2e2e;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeIn 1s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     header {
-      background-color: #ffffff;
-      padding: 30px 0;
+      padding: 40px;
+      background-color: #2e2e2e;
     }
-    img.logo {
-      width: 160px;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
-    h1 {
-      color: #6fba44;
-      font-size: 2.5em;
-      margin: 0.3em 0;
+
+    .logo {
+      max-height: 140px;
     }
-    p.lead {
-      font-size: 1.2em;
-      color: #666;
-      margin: 0 auto 2em;
-      max-width: 700px;
+
+    .intro-text h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #8CC63F;
     }
-    .section {
-      margin: 2em auto;
-      max-width: 800px;
-      padding: 0 20px;
-    }
-    .section h2 {
-      color: #6fba44;
-      font-size: 1.8em;
-    }
-    .section p {
+
+    .subtitle {
       font-size: 1em;
+      color: #ffffff;
+      margin-top: 5px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding: 40px;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .section h2 {
+      color: #8CC63F;
+      font-size: 1.8em;
+      width: 40%;
+    }
+
+    .section p {
+      width: 55%;
+      font-size: 1.05em;
       line-height: 1.6;
     }
+
     footer {
-      margin-top: 4em;
+      background-color: #1e1e1e;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
       font-size: 0.9em;
-      color: #777;
     }
+
     a {
-      color: #6fba44;
+      color: #8CC63F;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section h2, .section p {
+        width: 100%;
+      }
+
+      .logo-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        max-height: 100px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/oakmont-landing-page/main/oakmont-logo.png" alt="Oakmont Logo" class="logo" />
-    <h1>Welcome to Oakmont Consulting</h1>
-    <p class="lead">Not your typical recruitment site. We connect the best talent with the most exciting companies in AI, Machine Learning, Data Science & Hardware Systems.</p>
+    <div class="logo-container">
+      <img src="https://raw.githubusercontent.com/YOUR_USERNAME/oakmont-landing-page/main/Oakmont%20Logo%20-%20no%20background%20(2).png" alt="Oakmont Logo" class="logo" />
+      <div class="intro-text">
+        <h1>Welcome to Oakmont Consulting</h1>
+        <p class="subtitle">Not your typical recruitment site...</p>
+      </div>
+    </div>
   </header>
 
-  <div class="section">
-    <h2>🚀 What Makes Us Different?</h2>
-    <p>We're building a platform—not just a website. One that connects top candidates to elite companies through real relationships and human expertise.</p>
-  </div>
+  <main>
+    <div class="section">
+      <h2>Our Specialisms</h2>
+      <p>
+        We specialise in connecting top-tier talent with roles across:
+        <ul>
+          <li>AI & Machine Learning</li>
+          <li>Data Science & Engineering</li>
+          <li>Hardware & Embedded Systems</li>
+        </ul>
+        Whether you're a cutting-edge startup or a global player, we understand your space.
+      </p>
+    </div>
 
-  <div class="section">
-    <h2>🔍 Specialisms</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li>• AI & Machine Learning</li>
-      <li>• Data Science & Engineering</li>
-      <li>• Hardware & Embedded Systems</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>For Candidates</h2>
+      <p>
+        We know how important your next step is. That's why we don’t just send CVs — we build relationships.
+        Our specialist recruiters work with top companies to get your profile seen by the right people.
+        Through Oakmont, you’ll gain access to exclusive opportunities, industry insight, and personal support throughout your job search journey.
+      </p>
+    </div>
 
-  <div class="section">
-    <h2>🙋 For Candidates</h2>
-    <p>Work with our specialist recruiters to connect with leading employers in future-forward industries.</p>
-
-    <h2>🏢 For Clients</h2>
-    <p>Gain exclusive access to a carefully curated pool of talent across our niche markets.</p>
-  </div>
+    <div class="section">
+      <h2>For Clients</h2>
+      <p>
+        Tired of reviewing generic applications? We offer access to a hand-picked talent pool of specialists in AI, data, and embedded systems.
+        Our recruiters are domain-focused, ensuring you meet candidates who are technically aligned and culturally right.
+        We act as your brand ambassador in the market — not just filling roles, but making lasting hires.
+      </p>
+    </div>
+  </main>
 
   <footer>
-    <p>📩 <a href="mailto:info@oakmontconsulting.co.uk">info@oakmontconsulting.co.uk</a> | 📞 +44 (0) 203 435 5598</p>
-    <p>💼 <a href="https://www.linkedin.com/company/11016342/admin/page-posts/published/" target="_blank">Follow us on LinkedIn</a></p>
+    <p>📧 <a href="mailto:info@oakmontconsulting.co.uk">info@oakmontconsulting.co.uk</a> |
+       📞 <a href="tel:+442034355598">+44 (0) 203 435 5598</a></p>
+    <p>Connect with us on <a href="https://www.linkedin.com/company/11016342/admin/page-posts/published/" target="_blank">LinkedIn</a> while we build your platform.</p>
   </footer>
+
 </body>
 </html>
+
